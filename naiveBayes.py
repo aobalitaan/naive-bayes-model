@@ -94,7 +94,17 @@ def backwardElimination(varList, values, testing, target, k, metric):
 
     return current_metrics, varList     # if no variable was eliminated anymore
 
-
+def write_output(k, metrics, variables):
+    with open('output.txt', 'a') as file:
+        file.write(f"Best k-value: {k}\n")
+        file.write("\nBest Metrics:\n")
+        max_metric_length = max(len(metric) for metric in metrics)
+        for metric, value in metrics.items():
+            file.write(f"- {metric.ljust(max_metric_length)}: {value}\n")
+        file.write("\nBest variables after elimination:\n")
+        for variable in variables:
+            file.write(f"- {variable}\n")
+        file.write("====================\n")
 
 def main(varList, training, testing, target, metric):
     k_values = [0.01, 0.05, 0.1, 0.5, 1, 5, 10]     # k-values to test
@@ -127,3 +137,4 @@ def main(varList, training, testing, target, metric):
     print(f"\n\nBest k-value: {best_k}")
     print(f"Best Metrics ({metric}):", best_metrics)
     print("Best Variable List after Elimination:", best_varList)
+    write_output(best_k, best_metrics, best_varList)
