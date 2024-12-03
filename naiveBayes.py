@@ -13,7 +13,7 @@ def compute_frequencies(varList, dataset):
         for record in dataset:      # For each answer in the variable
             if var in record:
                 value = record[var]
-                freq[var][value] = freq[var].get(value, 0) + (1 / len(dataset)) # Counts them
+                freq[var][value] = freq[var].get(value, 0) + 1 # Counts them
 
     return freq
 
@@ -49,11 +49,17 @@ def naiveBayes(varList, values, testing, target, k):
     for dataset in [testing['wtarget'], testing['wotarget']]:   # Simply, loops through test set
         for test in dataset:
             # Gets the unnormalized probability that test == 1
-            temp1 = [values['P(x|target)'][var].get(test[var], k / (len(testing['wtarget']) + len(values['P(x|target)'][var]))) for var in varList]
+            temp1 = [
+                (values['P(x|target)'][var].get(test[var], 0) + k) / (len(testing['wtarget']) + k * len(values['P(x|target)'][var])) for var in varList
+            ]
+
+            
             v_target = values['P(target)'] * np.prod(temp1)
 
             # Gets the unnormalized probability that test == 0
-            temp2 = [values['P(x|~target)'][var].get(test[var], k / (len(testing['wtarget']) + len(values['P(x|~target)'][var]))) for var in varList]
+            temp2 = [
+                (values['P(x|~target)'][var].get(test[var], 0) + k) / (len(testing['wotarget']) + k * len(values['P(x|~target)'][var])) for var in varList
+            ]
             v_nottarget = values['P(~target)'] * np.prod(temp2)
 
             # Normalize Probabilities
