@@ -1,0 +1,48 @@
+Best k-value: 0.01
+
+Best Metrics:
+- accuracy        : 0.7727272727272727
+- precision       : 0.6907630522088354
+- recall          : 0.7818181818181819
+- f1              : 0.7334754797441365
+- confusion_matrix: [172, 77, 253, 48]
+
+Best variables after elimination:
+- Marital status
+- Application mode
+- Course
+- Previous qualification (grade)
+- Mother's qualification
+- Father's qualification
+- Mother's occupation
+- Father's occupation
+- Debtor
+- Tuition fees up to date
+- Gender
+- Age at enrollment
+- Curricular units 2nd sem (evaluations)
+- Curricular units 2nd sem (approved)
+- Unemployment rate
+- Inflation rate
+- GDP
+
+Eliminated variables with accuracy increase:
+- Curricular units 1st sem (grade): 0.0255
+- Curricular units 1st sem (enrolled): 0.0055
+- Curricular units 2nd sem (enrolled): 0.0036
+- Application order: 0.0018
+- Curricular units 1st sem (approved): 0.0036
+- Curricular units 1st sem (evaluations): 0.0036
+- Curricular units 2nd sem (grade): 0.0109
+- Curricular units 1st sem (credited): 0.0127
+- Previous qualification: 0.0073
+- Daytime/evening attendance	: 0.0018
+- Nacionality: 0.0018
+- Admission grade: 0.0000
+- Educational special needs: 0.0000
+- International: 0.0000
+- Curricular units 2nd sem (without evaluations): 0.0000
+- Curricular units 1st sem (without evaluations): -0.0018
+- Displaced: 0.0018
+- Curricular units 2nd sem (credited): 0.0018
+====================
