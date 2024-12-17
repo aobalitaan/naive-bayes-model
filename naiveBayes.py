@@ -125,11 +125,6 @@ def write_output(k, metrics, variables, eliminated_variables):
 def main(varList, training, testing, target, metric):
     k_values = [0.01, 0.05, 0.1, 0.5, 1, 5, 10]     # k-values to test
     
-    print(len(training))
-    print(len(testing))
-    print(training)
-    print(testing)
-    
     best_k = None
     best_metrics = None
     best_varList = None
