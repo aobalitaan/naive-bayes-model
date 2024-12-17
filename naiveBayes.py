@@ -107,7 +107,7 @@ def backwardElimination(varList, values, testing, target, k, metric, eliminated_
 
     return current_metrics, varList, eliminated_variables     # if no variable was eliminated anymore
 
-def write_output(k, metrics, variables):
+def write_output(k, metrics, variables, eliminated_variables):
     with open('output.txt', 'w') as file:
         file.write(f"Best k-value: {k}\n")
         file.write("\nBest Metrics:\n")
