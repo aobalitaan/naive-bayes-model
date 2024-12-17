@@ -1,0 +1,53 @@
+Best k-value: 0.01
+
+Best Metrics:
+- accuracy        : 0.7381818181818182
+- precision       : 0.6557377049180327
+- recall          : 0.7272727272727273
+- f1              : 0.689655172413793
+- confusion_matrix: [160, 84, 246, 60]
+
+Best variables after elimination:
+- Application mode
+- Previous qualification
+- Mother's qualification
+- Mother's occupation
+- Father's occupation
+- Admission grade
+- Tuition fees up to date
+- Gender
+- Age at enrollment
+- Curricular units 1st sem (enrolled)
+- Curricular units 1st sem (evaluations)
+- Curricular units 1st sem (without evaluations)
+- Curricular units 2nd sem (credited)
+- Curricular units 2nd sem (enrolled)
+- Curricular units 2nd sem (approved)
+- Curricular units 2nd sem (grade)
+====================
+Best k-value: 0.05
+
+Best Metrics:
+- accuracy        : 0.7509090909090909
+- precision       : 0.6640316205533597
+- recall          : 0.7636363636363637
+- f1              : 0.7103594080338267
+- confusion_matrix: [168, 85, 245, 52]
+
+Best variables after elimination:
+- Application order
+- Nacionality
+- Mother's qualification
+- Father's occupation
+- Tuition fees up to date
+- Gender
+- Age at enrollment
+- Curricular units 1st sem (enrolled)
+- Curricular units 1st sem (without evaluations)
+- Curricular units 2nd sem (credited)
+- Curricular units 2nd sem (enrolled)
+- Curricular units 2nd sem (evaluations)
+- Curricular units 2nd sem (approved)
+- Unemployment rate
+- GDP
+====================
